@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        {
+        margin: 0;
+        padding: 0;
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+    
+    /* CSS Variables */
+    :root{
+        --navbar-height: 59px;
+    }
+    
+    
+    
+    /* Navigation Bar: Logo and Image */
+    #logo{
+        margin: 10px 34px;
+    }
+    
+    #logo img{
+        height: 59px;
+        margin: 3px 6px;
+        border-radius: 50%;
+    }
+    #services img{
+        height: 59px;
+        margin: 3px 6px;
+        border-radius: 50%;
+    }
+    
+    
+    
+    
+    /* Home Section */
+    #home{
+        display: flex;
+    flex-direction: column;
+    padding: 0px 200px;
+    height: 289px;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    #home::before{ 
+        content: "";
+        position: absolute;
+        background: url('img/2514320.jpg') no-repeat center center/cover;
+        height: 642px;
+        top:0px;
+        left:0px;
+        width: 100%;
+        z-index: -1;
+        opacity:0.89;
+    }
+    
+    #home h1{
+        color:white;
+        text-align: center;
+        font-family: 'Bree Serif', serif;
+    }
+    
+    #home p{
+        color:white;
+        text-align: center;
+        font-size: 1.5rem;
+        font-family: 'Bree Serif', serif;
+    }
+    /* Services Section */
+    #services{
+        margin: 34px;
+        display: flex;
+    }
+    #services .box{ 
+        border: 2px solid brown;
+        padding: 34px;
+        margin: 2px 55px;
+        border-radius: 50%;
+        background: #f2f2f2;
+        margin-bottom: 20px;
+    }
+    
+    #services .box img{ 
+       height: 160px;
+       margin: auto;
+       display: block;
+    }
+    
+    #services .box p{
+        font-family: 'Bree Serif', serif;
+    
+    } 
+    
+    /* Clients Section */
+    #client-section{ 
+        position: relative;
+    }
+    
+    #client-section::before{
+     content: "";
+     position: absolute;
+     background: url('../bg.jpg');
+     width: 100%;
+     height: 100%;
+     z-index: -1;
+     opacity: 0.3;
+    }
+    
+    #clients{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .client-item{
+        padding: 34px;
+    }
+    
+    #clients img{
+        height: 124px;
+    }
+    
+    
+    /* Contact Section */
+    #contact{
+        position: relative;
+    }
+    #contact::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.7;
+        background: url('../contact.jpg') no-repeat center center/cover;
+    
+    }
+    #contact-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 34px;
+    }
+    #contact-box input, 
+    #contact-box textarea{
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 9px;
+        font-size: 1.1rem;
+    } 
+    
+    #contact-box form{
+        width: 40%;
+    }
+    
+    #contact-box label{
+       font-size: 1.3rem;
+       font-family: 'Bree Serif', serif;
+    
+    }
+    
+    
+    footer{
+        background: black;
+        color: white;
+        padding: 9px 20px;
+    }
+    
+    /* Utility Classes */
+    .h-primary{
+        font-family: 'Bree Serif', serif;
+        font-size: 3.8rem;
+        padding: 12px;
+        color:#cbcbf6;
+    }
+    
+    .h-secondary{
+        font-family: 'Bree Serif', serif;
+        font-size: 2.3rem;
+        padding: 12px;
+    }
+    
+    .center{
+        text-align: center;
+    }
+    </style>
+   
+    <title>Hello, world!</title>
+  </head>
+  <style>
+    .navbar-brand{
+      border-radius: 50%;
+    }
+  </style>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">sporloc</a>
+              <!-- <img src="img/sports-team-logo-creator-7.jpg" alt="Onlinebookings"> -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="book.html">Book now</a>
+            </li>
+            <!-- <li class="item"><a href="sign in.html">Sign in</a></li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="slot.html">Your slot</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled"><a href="sign in.html">Sign in</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- <section id="home">
+      <h2 class="h-primary">Sporloc</h2>
+      <!-- <button class="btn">Book Now</button><a href="book.html"></a>
+      <a href="book.html"><input type="button"></a> -->
+      <!-- <button id="myButton" class="btn" >Book Now</button> <script type="text/javascript"> document.getElementById("myButton").onclick = function () { location.href = "book.html"; }; </script>
+  </section> --> -->
+
+  <section id="services-container">
+      <h1 class="h-primary center"></h1>
+      <div id="services">
+          <div class="box">
+              <img src="img/th.jpg" alt="">
+              <h2 class="h-secondary center">Turf</h2>
+              <!-- <p class="center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, .
+              </p> -->
+          </div>
+          <div class="box">
+              <img src="img/futsal.jpg" alt="">
+              <h2 class="h-secondary center">Futsal</h2>
+              <!-- <p class="center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem,.
+              </p> -->
+          </div>
+          <div class="box">
+              <img src="img/kids.jpg" alt="">
+              <h2 class="h-secondary center">Kids Turf</h2>
+              <!-- <p class="center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, culpa suscipi.
+                  </p> -->
+          </div>
+      </div>
+  </section>
+
+  <footer>
+      <div class="center">
+          Copyright &copy; wwww.adwaith viju All rights reserved!
+      </div>
+  </footer>
+    
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>
