@@ -97,8 +97,6 @@ input,select {
 
 </style>
 <body>
-
-
 	<div class="container">
 		<div class="container-time">
 				<h2 class="heading">Time Open</h2>
@@ -116,28 +114,28 @@ input,select {
 		</div>
 
 		<div class="container-form">
-				<form action="#">
+				<form action="{{ url_for('register') }}" method="POST">
 					<h2 class="heading heading-yellow">Reservation Online</h2>
 
 					<div class="form-field">
 						<p>Your Name</p>
-						<input type="text" placeholder="Your Name">
+						<input type="text" placeholder="Your Name" name="name" required>
 					</div>
 					<div class="form-field">
 						<p>Your email</p>
-						<input type="email" placeholder="Your email">
+						<input type="email" placeholder="Your email" name="email" required>
 					</div>
 					<div class="form-field">
 						<p>Date</p>
-						<input type="date">
+						<input type="date" name="date" required>
 					</div>
 					<div class="form-field">
 						<p>Time</p>
-						<input type="time">
+						<input type="time" name="time" required>
 					</div>
 					<div class="form-field">
 						<p>How many people?</p>
-						<select name="select" id="#">
+						<select name="people" id="#" required>
 							<option value="1">1 person</option>
 							<option value="2">2 persons</option>
 							<option value="3">3 persosn</option>
@@ -147,7 +145,7 @@ input,select {
 						</select>
 					</div>
 
-					<button class="btn"></button>
+					<button class="btn">Book Now</button>
                    <a class="btn"><a href="slot.html">Book Now</a>
 				</form>
 		</div>
